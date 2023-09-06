@@ -1,0 +1,18 @@
+﻿<Window x:Class="Frequency_Dictionary.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Web Parser App" Height="350" Width="500">
+    <Grid>
+        <TextBox x:Name="urlTextBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="400" Margin="10" IsReadOnly="False"/>
+        <Button Content="Parse" HorizontalAlignment="Right" VerticalAlignment="Top" Width="80" Height="30" Margin="10" Click="ParseButton_Click" RenderTransformOrigin="-0.643,4.102"/>
+        <ListView x:Name="resultListView" HorizontalAlignment="Center" VerticalAlignment="Top" Width="480" Height="157" Margin="0,57,0,0">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Word" Width="200" DisplayMemberBinding="{Binding Word}" />
+                    <GridViewColumn Header="Frequency" Width="100" DisplayMemberBinding="{Binding Frequency}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>
+
